@@ -1,0 +1,11 @@
+streamlit
+streamlit_option_menu
+pickle
+warnings
+pandas
+plotly
+requests
+keras
+numpy
+opencv-python
+joblib
