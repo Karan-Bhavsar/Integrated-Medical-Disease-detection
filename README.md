@@ -1,115 +1,81 @@
-Integrated Medical Disease Detection
+# Integrated Medical Disease Detection
 
-A multi-disease prediction system built using Machine Learning and Deep Learning models. This Streamlit-based web application allows users to input medical parameters or upload images to predict the risk or presence of multiple diseases in a single platform.
+Integrated Medical Disease Detection is a multi-disease prediction system built using Machine Learning and Deep Learning. The application provides a unified platform where users can enter medical parameters or upload medical images to predict the risk or presence of multiple health conditions.
 
-The system integrates multiple trained models to provide real-time predictions for various medical conditions, helping demonstrate practical healthcare AI applications.
+This project demonstrates an end-to-end healthcare AI system with multiple trained models deployed through a single Streamlit interface.
 
-Features
+---
 
-The application supports prediction for the following diseases:
+## Features
 
-Heart Disease Prediction
+The system supports prediction for the following conditions:
 
-Diabetes Prediction
+- Heart Disease Prediction  
+- Diabetes Prediction  
+- Parkinson’s Disease Prediction  
+- Maternal Health Risk Prediction  
+- Fetal Health Classification  
+- Brain Tumor Detection (Image-based CNN)
 
-Parkinson’s Disease Prediction
+Users can select a disease from the sidebar, provide input values or upload an image, and receive instant predictions.
 
-Pregnancy Risk Prediction
+---
 
-Fetal Health Classification
+## Tech Stack
 
-Brain Tumor Detection (Image-based)
+**Language & Framework**
+- Python
+- Streamlit
 
-Users can interact with an easy-to-use web interface and receive instant results based on model predictions.
+**Machine Learning / Deep Learning**
+- Scikit-learn
+- TensorFlow / Keras
+- Pickle / Joblib model loading
+- CNN for image classification
 
-The system uses multiple ML and DL models loaded from saved files and deployed through a unified Streamlit interface. 
+**Libraries**
+- NumPy
+- Pandas
+- OpenCV
+- Plotly
+- Requests
 
+---
 
-Libraries
-
-NumPy
-
-Pandas
-
-OpenCV
-
-Joblib
-
-Plotly (for visualization support)
-
-Dependencies are listed in requirements.txt. 
-
-requirements
-
-Project Structure
+## Project Structure
 Integrated-Medical-Disease-Detection/
 │
 ├── main.py
 ├── requirements.txt
 │
 ├── Models/
-│   ├── diabetes_model.sav
-│   ├── parkinsons_model.sav
-│   ├── finalized_maternal_model.sav
-│   ├── fetal_health_classifier.sav
-│   ├── heart_disease_prediction_model.h5
-│   └── brain_model.h5
+│ ├── diabetes_model.sav
+│ ├── parkinsons_model.sav
+│ ├── finalized_maternal_model.sav
+│ ├── fetal_health_classifier.sav
+│ ├── heart_disease_model.h5
+│ └── brain_tumor_model.h5
 │
 ├── Datasets/
-│   ├── diabetes.csv
-│   ├── parkinsons.csv
-│   ├── fetal_health.csv
-│   ├── heart_disease_data.csv
-│   └── Maternal Health Risk Data Set.csv
-Installation
-1. Clone the repository
-git clone https://github.com/<your-username>/integrated-medical-disease-detection.git
-cd integrated-medical-disease-detection
-2. Create a virtual environment
+│ ├── diabetes.csv
+│ ├── parkinsons.csv
+│ ├── fetal_health.csv
+│ ├── heart_disease_data.csv
+│ └── Maternal Health Risk Data Set.csv
 
-Windows:
+
+---
+
+## Installation
+
+### 1. Clone the repository
+```bash
+git clone https://github.com/<your-username>/Integrated-Medical-Disease-Detection.git
+cd Integrated-Medical-Disease-Detection
 
 python -m venv venv
 venv\Scripts\activate
 
-Mac/Linux:
-
-python3 -m venv venv
-source venv/bin/activate
-3. Install dependencies
 pip install -r requirements.txt
-Run the Application
+
 streamlit run main.py
-
-The app will open in your browser at:
-
-http://localhost:8501
-How It Works
-
-Users select a disease from the sidebar.
-
-Enter medical parameters or upload an image.
-
-The corresponding pre-trained model is loaded.
-
-The system returns a prediction instantly.
-
-The application integrates multiple prediction pipelines into a single interface for ease of use and demonstration purposes.
-
-Model Details
-Disease	Model Type
-Heart Disease	Deep Learning (.h5)
-Diabetes	Machine Learning (Pickle)
-Parkinson’s	Machine Learning (Pickle)
-Pregnancy Risk	Machine Learning (Pickle)
-Fetal Health	Machine Learning (Pickle)
-Brain Tumor	CNN Image Classifier
-Use Case
-
-Educational and research demonstration
-
-Healthcare AI portfolio project
-
-Multi-model deployment example
-
-End-to-end ML system using Streamlit
